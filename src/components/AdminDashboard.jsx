@@ -23,7 +23,7 @@ const AdminDashboard = () => {
       <div className="custom-bg-color bounded flex flex-col items-center justify-center h-[100vh]">
       <h1 className="py-5  ">Admin Dashboard</h1>
         <div className="submission-form rounded-lg flex flex-col items-center justify-center p-8 w-[50wh]">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto table-box">
             <table className="table my-5">
               <thead>
                 <tr>
@@ -42,17 +42,17 @@ const AdminDashboard = () => {
                     <td>
                       <a
                         href={item.driveLink}
-                        className="overflow-hidden truncate ext-ellipsis block"
+                        className="underline overflow-hidden truncate ext-ellipsis block"
                       >
-                        {item.driveLink}
+                        Inspect Drive Link
                       </a>
                     </td>
                     <td>
                       <a
                         href={item.liveLink}
-                        className="overflow-hidden truncate max-w-xs block"
+                        className="underline overflow-hidden truncate max-w-xs block"
                       >
-                        {item.liveLink}
+                        Inspect Live Link
                       </a>
                     </td>
                     <td>

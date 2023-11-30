@@ -1,7 +1,3 @@
-/* .submission-form{
-    background-color: #2E4F4F;
-    box-shadow: 1px 1px 15px 2px  white;
-} */
 .bounded{
     background-color: #000000;
 }
@@ -13,3 +9,9 @@ h1,table,th,td{
     border: 1px solid white;
     border-radius: 0.5rem;
 }
+@media (max-width: 554px) {
+    .submission-form {
+      flex-direction: column;
+      width: 70vw;     
+    }
+  }
