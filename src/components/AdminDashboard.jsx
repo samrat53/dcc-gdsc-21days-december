@@ -1,7 +1,14 @@
 import React from "react";
-
+import "./styles.css";
 const AdminDashboard = () => {
   const data = [
+    {
+      username: "samrat_53",
+      day: 1,
+      driveLink: "www.google.com",
+      status: "pending",
+      liveLink: "www.google.com",
+    },
     {
       username: "samrat_53",
       day: 1,
@@ -13,7 +20,7 @@ const AdminDashboard = () => {
 
   return (
     <>
-      <div className="bounded flex flex-col items-center justify-center h-[100vh]">
+      <div className="custom-bg-color bounded flex flex-col items-center justify-center h-[100vh]">
       <h1 className="py-5  ">Admin Dashboard</h1>
         <div className="submission-form rounded-lg flex flex-col items-center justify-center p-8 w-[50wh]">
           <div className="overflow-x-auto">
