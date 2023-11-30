@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn{
+    background-color: #CBE4DE;
+    color: black;
+}
+.btn[disabled] {
+    background:  #cbe4de87;
+    color: white;
+    cursor: not-allowed;
+  }
