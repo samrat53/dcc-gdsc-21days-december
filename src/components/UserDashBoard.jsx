@@ -6,7 +6,7 @@ const UserDashBoard = () => {
     {
       day: 1,
       link: "www.google.com",
-      status: 30,
+      status: true,
     },
   ];
 
@@ -22,7 +22,6 @@ const UserDashBoard = () => {
   };
 
   const handleSubmit = () => {
-    // Your submission logic here
     console.log("Form submitted:", { driveLink, liveLink });
   };
 
@@ -38,13 +37,13 @@ const UserDashBoard = () => {
             </summary>
             <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-52 bg-white">
               <li className="text-black">
-                <a>Web Development</a>
+                <a name="web" value="web">Web Development</a>
               </li>
               <li li className="text-black">
-                <a>Android Development</a>
+                <a name="android" value="android">Android Development</a>
               </li>
               <li className="text-black">
-                <a>AI / ML</a>
+                <a name="aiml" value="aiml">AI / ML</a>
               </li>
             </ul>
           </details>
@@ -52,7 +51,7 @@ const UserDashBoard = () => {
           <label className="form-control w-full max-w-xs my-2">
             <div className="label">
               <span className="label-text text-white">Drive Link</span>
-              <span className="label-text-alt text-green-600">*</span>
+              <span className="label-text-alt text-red-600">*</span>
             </div>
             <input
               type="text"
@@ -64,7 +63,6 @@ const UserDashBoard = () => {
             />
             <div className="label">
               <span className="label-text text-white">Live Link</span>
-              <span className="label-text-alt text-blue-600">#</span>
             </div>
             <input
               type="text"
@@ -76,10 +74,10 @@ const UserDashBoard = () => {
             />
             <div className="label">
               <span className="label-text-alt">
-                Mandatory: <span className="text-green-600">*</span>
+
               </span>
               <span className="label-text-alt">
-                Optional: <span className="text-blue-600">#</span>
+                Mandatory: <span className="text-red-600">*</span>
               </span>
             </div>
           </label>
