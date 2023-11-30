@@ -14,8 +14,8 @@ const AdminDashboard = () => {
   return (
     <>
       <div className="bounded flex flex-col items-center justify-center h-[100vh]">
+      <h1 className="py-5  ">Admin Dashboard</h1>
         <div className="submission-form rounded-lg flex flex-col items-center justify-center p-8 w-[50wh]">
-          <h1 className="py-5  ">Admin Dashboard</h1>
           <div className="overflow-x-auto">
             <table className="table my-5">
               <thead>

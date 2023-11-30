@@ -28,22 +28,27 @@ const UserDashBoard = () => {
   return (
     <>
       <div className="bounded flex flex-col items-center justify-center h-[100vh]">
+        <h1 className="pb-7 ">User Dashboard</h1>
         <div className="submission-form rounded-lg flex flex-col items-center justify-center p-8 w-[50wh]">
-          <h1 className="py-5  ">User Dashboard</h1>
-
           <details className="dropdown">
             <summary className="m-1 text-white btn rounded-lg cursor-pointer bg-green-200 hover:bg-green-500 hover:text-white ">
               Domain Select
             </summary>
             <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-52 bg-white">
               <li className="text-black">
-                <a name="web" value="web">Web Development</a>
+                <a name="web" value="web">
+                  Web Development
+                </a>
               </li>
               <li li className="text-black">
-                <a name="android" value="android">Android Development</a>
+                <a name="android" value="android">
+                  Android Development
+                </a>
               </li>
               <li className="text-black">
-                <a name="aiml" value="aiml">AI / ML</a>
+                <a name="aiml" value="aiml">
+                  AI / ML
+                </a>
               </li>
             </ul>
           </details>
@@ -55,7 +60,7 @@ const UserDashBoard = () => {
             </div>
             <input
               type="text"
-              placeholder="Type here"
+              placeholder="Provide sample of project"
               name="driveLink"
               value={driveLink}
               onChange={handleDriveLinkChange}
@@ -66,16 +71,14 @@ const UserDashBoard = () => {
             </div>
             <input
               type="text"
-              placeholder="Type here"
+              placeholder="Show working project"
               name="liveLink"
               value={liveLink}
               onChange={handleLiveLinkChange}
               className="input input-bordered w-full max-w-xs"
             />
             <div className="label">
-              <span className="label-text-alt">
-
-              </span>
+              <span className="label-text-alt"></span>
               <span className="label-text-alt">
                 Mandatory: <span className="text-red-600">*</span>
               </span>
@@ -88,6 +91,7 @@ const UserDashBoard = () => {
           >
             Submit
           </button>
+          <h2 className="pt-5 -mb-3 underline text-white">Your Heat Map</h2>
           <div className="overflow-x-auto">
             <table className="table my-5">
               <thead>
