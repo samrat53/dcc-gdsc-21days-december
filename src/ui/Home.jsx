@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     
-    <div className="min-h-screen flex flex-col items-center justify-center z-[1]">
+    <div className="min-h-screen flex flex-col items-center justify-center z-[1] custom-bg-color">
       <div className="text-6xl font-extrabold text-orange-400">21 Days Challenge</div>
       <div className="text-3xl">
         <span className="text-red-500 mr-2">Web</span>

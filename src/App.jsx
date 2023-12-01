@@ -8,6 +8,7 @@ import Error from './ui/Error'
 import AppLayout from './ui/AppLayout';
 import Register from './ui/Register';
 import SignIn from './ui/SignIn';
+import LeaderBoard from './ui/LeaderBoard';
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/user',
         element: <UserDashBoard/>,
+      },
+      {
+        path: '/LeaderBoard',
+        element: <LeaderBoard/>,
       },
       {
         path: '/register',

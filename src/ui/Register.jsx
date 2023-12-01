@@ -16,8 +16,8 @@ export default function Register() {
  
   
   return (
-    <div className='w-1/2 min-h-fit mx-auto mt-40 min-w-fit z-40 relative'>
-      <form className='bg-slate-300 shadow-md rounded px-8 pt-6 pb-8 mb-4 '>
+    <div className='w-1/2 min-h-fit mx-auto mt-40 min-w-fit z-40 relative '>
+      <form className='bg-slate-300 shadow-md rounded px-8 pt-6 pb-8 mb-4 custom-bg-color'>
         <div className='mb-4'>
           <label className='flex justify-center mb-4 text-black text-2xl font-extrabold'>
             Sign Up 🚀
