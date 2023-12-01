@@ -20,7 +20,7 @@ const LandingPage = () => {
   return (
     <>
       <div className="custom-bg-color bounded flex flex-col items-center justify-center h-[100vh]">
-        <h1 className="text-white m-7" action="/">Hall of Fame!</h1>
+        <h1 className="text-white m-7" action="/">Leader Board</h1>
         <div className="submission-form rounded-lg lg:flex items-center justify-center p-8 w-[50wh]">
           <div role="tablist" className="tabs-lg tabs-lifted  ">
             <a
