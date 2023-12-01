@@ -42,4 +42,4 @@ export const Loader = () => {
       <div className='font-extrabold'>Loading...</div>
     </div>
   );
-};
+}

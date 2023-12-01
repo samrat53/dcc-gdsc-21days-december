@@ -24,7 +24,7 @@ const UserDashBoard = () => {
   const handleLiveLinkChange = (e) => {
     setLiveLink(e.target.value);
   };
-//aaaa
+
   const handleSubmit = () => {
     const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
     const isValidUrl = urlRegex.test(driveLink);
@@ -40,9 +40,9 @@ const UserDashBoard = () => {
 
   return (
     <>
-      <div className="custom-bg-co`lor bounded flex flex-col items-center justify-center h-[100vh] w-[100vh]">
+      <div className="custom-bg-co`lor bounded flex flex-col items-center justify-center h-[100vh]">
         <h1 className="pb-7 ">User Dashboard</h1>
-        <div className="submission-form rounded-lg lg:flex items-center justify-center p-8 w-[100wh]">
+        <div className="submission-form rounded-lg lg:flex items-center justify-center p-8 w-[50wh]">
           <select className="select select-bordered w-full max-w-xs">
             <option disabled selected>
               Select Domain

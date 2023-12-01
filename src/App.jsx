@@ -6,7 +6,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './ui/Home';
 import Error from './ui/Error'
 import AppLayout from './ui/AppLayout';
-
+import Register from './ui/Register';
+import SignIn from './ui/SignIn';
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -24,6 +25,14 @@ const router = createBrowserRouter([
       {
         path: '/user',
         element: <UserDashBoard/>,
+      },
+      {
+        path: '/register',
+        element: <Register/>,
+      },
+      {
+      path: '/signin',
+        element: <SignIn/>,
       },
       
     ],
