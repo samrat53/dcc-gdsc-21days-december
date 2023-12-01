@@ -2,18 +2,16 @@ import React from "react";
 import { useState } from "react";
 import "./styles.css";
 
-const LandingPage = () => {
+const LeaderBoard = () => {
   const [activeTab, setActiveTab] = useState("");
   const data = [
     {
-      uniqueid: "str123",
       username: "samrat_53",
-      enrollNo: "22ucs021",
+      score: 100,
     },
     {
-      uniqueid: "str123",
       username: "samrat_53",
-      enrollNo: "22ucs021",
+      score: 100,
     },
   ];
 
@@ -70,9 +68,9 @@ const LandingPage = () => {
                   </thead>
                   <tbody>
                     {data.map((item) => (
-                      <tr key={item.uniqueid}>
+                      <tr key={item.username}>
                         <td>{item.username}</td>
-                        <td>{item.enrollNo}</td>
+                        <td>{item.score}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -86,4 +84,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default LeaderBoard;
