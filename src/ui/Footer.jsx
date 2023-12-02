@@ -1,7 +1,7 @@
 
 export const Footer = () => {
   return (
-    <footer className="footer p-10  text-base-content absolute">
+    <footer className="footer p-10  text-base-content  custom-bg-color">
     <aside>
      <img height={50} width={50} src="/dcc.svg"/>
       <p>DEVELOPERS & CODERS CLUB NITA<br/></p>

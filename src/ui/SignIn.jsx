@@ -77,26 +77,7 @@ export default function SignIn() {
         }
       />
         </div>
-        <div className='mb-4'>
-        <input
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-white font-bold leading-tight focus:outline-none focus:shadow-outline custom-bg-color '
-            {...register("confirmPassword", { required: "Confirm Password is required",
-            validate:(value)=> value === password || 
-            "Password do not match"
-          })}
-            placeholder='Confirm Password'
-          />
-          <ErrorMessage
-        errors={errors}
-        name="confirmPassword"
-        render={({ messages }) =>
-          messages &&
-          Object.entries(messages).map(([type, message]) => (
-            <p className='text-red-500' key={type}>{message}</p>
-          ))
-        }
-      />
-        </div>
+
         
         <div className='flex items-center justify-center '>
           <button

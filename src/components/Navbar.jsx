@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <>
         
-            <div className="navbar  z-50 absolute top-0 ">
+            <div className="navbar  z-50 absolute top-0 min-w-[100vh] ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,12 +19,10 @@ const Navbar = () => {
     <img src="dcc.svg" height={50} width={50}/>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 flex items-center justify-center">
       <li><Link to="/">Home</Link></li>
-      <li>
-        
-      </li>
       <li><Link to="/LeaderBoard">LeaderBoard</Link></li>
+      <li><Link to="/FAQs">FAQs</Link></li>
     </ul>
   </div>
   <div className="navbar-end">

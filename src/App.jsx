@@ -1,5 +1,5 @@
 
-import './App.css'
+
 import AdminDashboard from './ui/AdminDashboard'
 import UserDashBoard from './ui/UserDashboard'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
@@ -9,6 +9,8 @@ import AppLayout from './ui/AppLayout';
 import Register from './ui/Register';
 import SignIn from './ui/SignIn';
 import LeaderBoard from './ui/LeaderBoard';
+
+import Faq from './ui/FAQ';
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/LeaderBoard',
         element: <LeaderBoard/>,
+      },
+      {
+        path: '/FAQs',
+        element: <Faq/>,
       },
       {
         path: '/register',

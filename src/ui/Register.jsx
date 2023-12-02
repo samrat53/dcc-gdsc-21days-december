@@ -95,8 +95,8 @@ export default function Register() {
             className='shadow appearance-none border rounded w-full py-2 px-3 text-white font-bold leading-tight focus:outline-none focus:shadow-outline custom-bg-color '
             {...register("enrollmentNumber", { required: "Enrollment number is required",pattern:
             {
-            value:/^\d{2}[A-Za-z]{3}\d{3}$/,
-            message:"Enrollment number must be in the format of 2 digits, 3 letters, and 3 digits"
+            value:/^\d{2}[A-Z]{3,4}\d{3}$/,
+            message:"Enrollment number must be in the format of 2 digits, 3 or 4 letters, and 3 digits"
             }
           })}
             placeholder='Enrollment Number'

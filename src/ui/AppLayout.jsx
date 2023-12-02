@@ -8,24 +8,19 @@ function AppLayout() {
   const isLoading = navigation.state === 'loading';
 
   return (
-    <div className="">
-      {/* {isLoading && <Loader />} */}
-      <div className=''>
-      <Header />
-      </div>
-
-      <div className="">
-        <main className="">
-          <div className=''> 
-          <Outlet />
-          </div>
-          <Footer/>
-        </main>
-      </div>
+    <>
+    <div className='min-w-[100vh] flex flex-col '>
+      <nav className='min-w-[100vh] justify-between items-center'>
+      <Header/>
+      </nav>
+      <Outlet/>
+      <Footer/>
+    </div>
+    </>
 
       
-    </div>
-  );
+  
+  )
 }
 
 export default AppLayout;
