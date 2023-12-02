@@ -7,18 +7,20 @@ import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form"
 import { DevTool } from '@hookform/devtools';
 // import {useNavigate} from 'react-router-dom'
-
-
+import { ErrorMessage } from "@hookform/error-message"
 export default function Register() {
 
   const {
     register,
     handleSubmit,
     control,
-    watch
+    watch,
+    formState:{errors}
     
 
-  } = useForm()
+  } = useForm({
+    criteriaMode:"all"
+  })
   const password = watch("password","")
   const onSubmit = (data) => console.log(data)
 
@@ -43,18 +45,31 @@ export default function Register() {
           })}
             placeholder='Username'
           />
+              
+
+<ErrorMessage
+  errors={errors}
+  name="username"
+  render={({ message }) => <p className='text-red-500'>{message}</p>}
+/>
+                
         </div>
         <div className='mb-4'>
         <input
             className='shadow appearance-none border rounded w-full py-2 px-3 text-white font-bold leading-tight focus:outline-none focus:shadow-outline custom-bg-color '
-            {...register("firstName", { required: true, maxLength: 20 })}
+            {...register("fullName", { required:"You need to enter your  name", maxLength: 20 })}
             placeholder='Full Name'
           />
+          <ErrorMessage
+  errors={errors}
+  name="fullName"
+  render={({ message }) => <p className='text-red-500 font-[12px] text-left '>{message}</p>}
+/>
         </div>
         <div className='mb-4'>
         <input
             className='shadow appearance-none border rounded w-full py-2 px-3 text-white font-bold leading-tight focus:outline-none focus:shadow-outline custom-bg-color '
-            {...register("email", { required: "Email is requried",
+            {...register("email", { required: "Email is a requried field",
             
             pattern:
             {value:/.+@.+\..+/,
@@ -64,6 +79,16 @@ export default function Register() {
           })}
             placeholder='Email'
           />
+                <ErrorMessage
+        errors={errors}
+        name="email"
+        render={({ messages }) =>
+          messages &&
+          Object.entries(messages).map(([type, message]) => (
+            <p className="text-red-500"key={type}>{message}</p>
+          ))
+        }
+      />
         </div>
         <div className='mb-4'>
         <input
@@ -76,6 +101,16 @@ export default function Register() {
           })}
             placeholder='Enrollment Number'
           />
+                <ErrorMessage
+        errors={errors}
+        name="enrollmentNumber"
+        render={({ messages }) =>
+          messages &&
+          Object.entries(messages).map(([type, message]) => (
+            <p className='text-red-500' key={type}>{message}</p>
+          ))
+        }
+      />
         </div>
         <div className='mb-4'>
         <input
@@ -91,36 +126,41 @@ export default function Register() {
           })}
             placeholder='Phone number'
           />
+                <ErrorMessage
+        errors={errors}
+        name="phoneNumber"
+        render={({ messages }) =>
+          messages &&
+          Object.entries(messages).map(([type, message]) => (
+            <p className='text-red-500' key={type}>{message}</p>
+          ))
+        }
+      />
         </div>
         <div className='mb-4'>
         <input
             className='shadow appearance-none border rounded w-full py-2 px-3 text-white font-bold leading-tight focus:outline-none focus:shadow-outline custom-bg-color '
-            {...register("password", { required: true,minLength:8,pattern:[
-            {
-              value:/[A-Z]/,
-              message:"Password must have at least one uppercase letter"
-            },
-            {
-              value:/[a-z]/,
-              message:"Password must have at least one lower case letter"
-            },
-            {
-              value:/[0-9]/,
-              message:"Password must have atleast one number"
-            },
-            {
-              value: /[\W]/,
-              message:"Password must have atleast one special character"
-            },
-            
+            {...register("password", { required: "Password is required", minLength: { value: 8, message: "Password must be at least 8 characters long" },
+            pattern: {
+              value: /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W)/,
 
-
-
-            ] 
+              message: "Password must include uppercase and lowercase letters, a digit, and a special character",
+            },
+          
           
           })}
             placeholder='Password'
           />
+                <ErrorMessage
+        errors={errors}
+        name="password"
+        render={({ messages }) =>
+          messages &&
+          Object.entries(messages).map(([type, message]) => (
+            <p className='text-red-500' key={type}>{message}</p>
+          ))
+        }
+      />
         </div>
         <div className='mb-4'>
         <input
@@ -131,6 +171,16 @@ export default function Register() {
           })}
             placeholder='Confirm Password'
           />
+          <ErrorMessage
+        errors={errors}
+        name="confirmPassword"
+        render={({ messages }) =>
+          messages &&
+          Object.entries(messages).map(([type, message]) => (
+            <p className='text-red-500' key={type}>{message}</p>
+          ))
+        }
+      />
         </div>
         
         
