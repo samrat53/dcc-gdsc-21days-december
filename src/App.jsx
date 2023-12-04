@@ -10,6 +10,7 @@ import Register from './ui/Register';
 import SignIn from './ui/SignIn';
 import LeaderBoard from './ui/LeaderBoard';
 import Testing from './ui/testing';
+import Display from './ui/Display';
 
 import Faq from './ui/FAQ';
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/display',
+        element: <Display />,
       },
       {
         path: '/admin',

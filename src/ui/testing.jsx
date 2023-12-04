@@ -1,10 +1,17 @@
+import { useEffect,useState } from 'react';
 import useApiStore from '../api/ApiStore';
 import { useQuery } from 'react-query';
 
 const Testing = () => {
-  const { testApi } = useApiStore(); // Fix: use destructuring for the named export
+  const { testApi,responseData } = useApiStore(); // Fix: use destructuring for the named export
   const { data, isLoading, error } = useQuery('testApi', testApi);
+  const [hello, setHello] = useState("");
+  
+  useEffect(()=>
+  {
+    setHello(responseData)
 
+  },[responseData])
   const handleIt = async() => {
     try
     {
@@ -18,7 +25,10 @@ const Testing = () => {
   };
 
   return (
+    <>
     <button onClick={handleIt} className='text-[200px]'>Testing</button> 
+    <div>{responseData.data}</div>
+    </>
   );
 };
 
