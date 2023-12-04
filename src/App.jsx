@@ -9,6 +9,7 @@ import AppLayout from './ui/AppLayout';
 import Register from './ui/Register';
 import SignIn from './ui/SignIn';
 import LeaderBoard from './ui/LeaderBoard';
+import Testing from './ui/testing';
 
 import Faq from './ui/FAQ';
 const router = createBrowserRouter([
@@ -25,6 +26,12 @@ const router = createBrowserRouter([
         path: '/admin',
         element: <AdminDashboard />,
       },
+      {
+        path: '/test',
+        element: <Testing/>,
+      },
+
+      
       {
         path: '/user',
         element: <UserDashBoard/>,

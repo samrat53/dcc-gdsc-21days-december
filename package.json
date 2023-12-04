@@ -21,7 +21,8 @@
     "react-hook-form": "^7.48.2",
     "react-query": "^3.39.3",
     "react-tsparticles": "^2.12.2",
-    "tsparticles": "^2.12.0"
+    "tsparticles": "^2.12.0",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",
